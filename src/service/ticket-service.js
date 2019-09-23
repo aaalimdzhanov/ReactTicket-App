@@ -13,13 +13,16 @@ export default class TicketService{
         return res.result;
     }
     getTicketById(id){
-        return this.getResource(`/getTicketById/{id}`)
+        return this.getResource(`/getTicketById/${id}`)
+    }
+    getNumberOfTicketsByUserIdAndType(id,type){
+        return this.getResource(`/getNumberOfIncByUserId?id=${id}&type=${type}`);
     }
 }
 
-const ticketService = new TicketService();
-ticketService.getAllTicket().then((ticket)=>{
-    ticket.forEach((t)=>{
-        console.log(t.id);
-    })
-});
+// const ticketService = new TicketService();
+// ticketService.getAllTicket().then((ticket)=>{
+//     ticket.forEach((t)=>{
+//         console.log(t.id);
+//     })
+// });
