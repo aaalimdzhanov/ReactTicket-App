@@ -3,29 +3,29 @@ import React,{Component} from 'react';
 const Table =(props)=>{
 console.log(props)
     return(
-        <table class="table table-bordered">
+        <table class="table table-hover">
         <thead>
             <tr>
                 <th>
-                    ID
-                </th>
-                <th>
-                    Инициатор
+                    Номер
                 </th>
                 <th>
                     Описание
                 </th>
                 <th>
-                    Progress
-                </th>
-                <th>
-                    Страна
+                    Срок Исполнения
                 </th>
                 <th>
                     Приоритет
                 </th>
                 <th>
-                    Дата создания
+                    Страна
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
+                    Редактировать
                 </th>
             </tr>
         </thead>
@@ -33,13 +33,19 @@ console.log(props)
             {props.allTickets.map(ticket =>{
                 return(
                     <tr>
+                        
                         <td>{ticket.id}</td>
-                        <td>{ticket.priority}</td>
                         <td>{ticket.shortDesc}</td>
-                        <td>{ticket.status}</td>
-                        <td>{ticket.site.name}</td>
-                        <td>{ticket.priority}</td>
                         <td>{ticket.addDt}</td>
+                        <td>{ticket.priority}</td>
+                        <td>{ticket.site.name}</td>
+                        <td>{ticket.status}</td>
+                        <td>
+                        <button type="button" className="btn btn-secondary btn-sm"><i class="mdi mdi-pencil"></i></button>
+                        </td>
+                        
+                                              
+                        
                         
  
                     </tr>
