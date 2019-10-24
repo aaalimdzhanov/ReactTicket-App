@@ -1,21 +1,36 @@
 import React,{Component} from 'react';
-import Header from '../header/header'
-import Sidebar from '../sidebar/sidebar'
-import Content from '../contetnt/content'
+import {withTicketService} from '../hoc';
+import {Route, Switch} from 'react-router-dom';
+import {HomePage, AdministratorsPage} from '../pages'
 
-
-export default class App extends Component {
-    state = {  }
-    render() { 
-        return (
-            <div className="conatiner-scroller">
-                <Header />
-                <div class="container-fluid page-body-wrapper">
-                <Sidebar />
-                <Content />
-                </div>
-            </div>
-          );
-    }
+// const App = () =>{
+   
+//     return (
+//         <div className="conatiner-scroller">
+//             <Header />
+//             <div className="container-fluid page-body-wrapper">
+//             <Sidebar />
+//             <Content />
+//             </div>
+//         </div>
+//       );
+// }
+const App = () =>{
+   
+    return (
+        <div className="conatiner-scroller">
+           <Switch>
+               <Route path="/" 
+               component={HomePage}
+               exact
+               />
+                <Route path="/administrators" 
+               component={AdministratorsPage}
+               />
+           </Switch>
+        </div>
+      );
 }
+
+export default App;
  

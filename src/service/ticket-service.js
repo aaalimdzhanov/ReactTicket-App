@@ -18,6 +18,9 @@ export default class TicketService{
     getNumberOfTicketsByUserIdAndType(id,type){
         return this.getResource(`/getNumberOfIncByUserId?id=${id}&type=${type}`);
     }
+    getAllBooks(){
+        return 'Hello';
+    }
 }
 
 // const ticketService = new TicketService();

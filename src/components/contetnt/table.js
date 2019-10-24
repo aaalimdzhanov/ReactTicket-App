@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 const Table =(props)=>{
 console.log(props)
     return(
-        <table class="table table-hover">
+        <table className="table table-hover">
         <thead>
             <tr>
                 <th>
@@ -32,8 +32,7 @@ console.log(props)
         <tbody>
             {props.allTickets.map(ticket =>{
                 return(
-                    <tr>
-                        
+                    <tr>    
                         <td>{ticket.id}</td>
                         <td>{ticket.shortDesc}</td>
                         <td>{ticket.addDt}</td>
@@ -41,13 +40,8 @@ console.log(props)
                         <td>{ticket.site.name}</td>
                         <td>{ticket.status}</td>
                         <td>
-                        <button type="button" className="btn btn-secondary btn-sm"><i class="mdi mdi-pencil"></i></button>
+                        <button type="button" className="btn btn-secondary btn-sm"><i className="mdi mdi-pencil"></i></button>
                         </td>
-                        
-                                              
-                        
-                        
- 
                     </tr>
                 );
             })}
