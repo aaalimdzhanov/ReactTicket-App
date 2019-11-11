@@ -16,17 +16,15 @@ import {HomePage, AdministratorsPage} from '../pages'
 //       );
 // }
 const App = () =>{
-   
+
     return (
         <div className="conatiner-scroller">
            <Switch>
                <Route path="/" 
                component={HomePage}
-               exact
-               />
+               exact/>
                 <Route path="/administrators" 
-               component={AdministratorsPage}
-               />
+               component={AdministratorsPage}/>
            </Switch>
         </div>
       );

@@ -1,11 +1,13 @@
 const initialState = {
-    tickets:[]
+    tickets:[ ],
+    loading:true
 };
 const reducer =(state = initialState,action)=>{
     switch(action.type){
         case 'TICKETS_LOADED':
             return{
-                tickets: action.payload 
+                tickets: action.payload ,
+                loading:false
             };
         default:
             return state;

@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 
 const Table =(props)=>{
-console.log(props)
+
     return(
         <table className="table table-hover">
         <thead>

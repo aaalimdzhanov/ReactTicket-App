@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../header/header';
 import Sidebar from '../sidebar/sidebar';
+import TicketList from '../ticket-list';
+
 
 
 const HomePage =()=>{
@@ -9,7 +11,7 @@ const HomePage =()=>{
             <Header />
             <div className="container-fluid page-body-wrapper">
                 <Sidebar />
-            
+                <TicketList  tickets={[]}/>
             </div>
         </div>
       );
